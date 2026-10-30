@@ -82,9 +82,6 @@
 
 ```text
 .
-├── attacker/                       # Attacker reconnaissance tools & automated attack scripts
-│   ├── attacker_console.py         # Interactive attacker terminal simulation
-│   └── requirements.txt
 ├── fcgd_ah/                        # FCGD-AH Core Generative Deception Package
 │   ├── taxonomy.py                 # 7 Honeytoken taxonomy categories
 │   ├── schemas.py                  # Telemetry dataclasses & session state
@@ -194,15 +191,11 @@ python honeypot/honeypot_server.py
 ```
 *Listens on port `2222` (or configured port) emulating an Ubuntu 22.04 LTS host.*
 
-### 3. Attacker Terminal & Reconnaissance
-In a separate terminal, launch the interactive attack console:
-```bash
-python attacker/attacker_console.py
-```
-Or connect using standard OpenSSH client:
+### 3. SSH Client Connection & Reconnaissance
+Connect using any standard SSH client:
 ```bash
 ssh attacker@127.0.0.1 -p 2222
-# Password: any password accepted
+# Password: any password accepted (e.g., password)
 ```
 Try running reconnaissance commands:
 ```bash
