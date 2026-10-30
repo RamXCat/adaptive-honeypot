@@ -1,0 +1,2 @@
+# Required for SFTP deployment only
+paramiko
